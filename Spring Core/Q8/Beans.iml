@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4" />
+
+<beans>
+
+    <bean id="Bean3" class="com.priyesh.task.DemoBean"
+                    init-method="customInit"
+                    destroy-method="customDestroy"></bean>
+
+</beans>
