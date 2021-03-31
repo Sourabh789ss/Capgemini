@@ -1,0 +1,182 @@
+package com.javaexcel.rest8;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class productController {
+	@Autowired
+	private productService productService;
+	
+	@RequestMapping("/products")
+	public List<Product> getAllProducts()
+	{
+		return productService.getAllProducts();
+	}
+	
+	@RequestMapping("/products/{id}")
+	public Product getProduct(@PathVariable String id)
+	{
+		return productService.getProduct(id);
+	}
+	
+	@RequestMapping(method=RequestMethod.POST,value="/products")
+	public void addProduct(@RequestBody Product product)
+	{
+		productService.addProduct(product);
+	}
+	
+	@RequestMapping(method=RequestMethod.PUT,value="/products/{id}")
+	public void updateProduct(@RequestBody Product product,@PathVariable String id)
+	{
+		productService.updateProduct(id,product);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE,value="/products/{id}")
+	public void deleteOrder(@RequestBody Product product,@PathVariable String id)
+	{
+		productService.deleteProduct(id,product);
+	}
+
+}
+
+
+
+package com.javaexcel.rest8;
+
+@Entity
+@Document(collection="products")
+public class Product {
+	@Id
+	private String id;
+	private String title;
+	private String description;
+	private boolean placed;
+	
+	public Product()
+	{
+		
+	}
+	
+	
+
+	public Product(String title, String description, boolean placed) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.placed = placed;
+	}
+
+
+
+	public String getid() {
+		return id;
+	}
+
+	public void setProductId(String id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public boolean isPlaced() {
+		return placed;
+	}
+
+	public void setPlaced(boolean placed) {
+		this.placed = placed;
+	}
+
+
+
+}
+
+
+package com.javaexcel.rest8;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class productService {
+	@Autowired
+	productRepository productRepository;
+
+	public List<Product>getAllProducts()
+	{
+		List<Product> products=new ArrayList<>();
+		productRepository.findAll().forEach(products::add);
+		return products;
+	}
+
+	public Product getProduct(String id) {
+		return productRepository.findOne(id);
+	}
+
+	public void addProduct(Product product) {
+		
+		productRepository.save(product);
+	}
+
+	public void updateProduct(String id, Product product) {
+		
+		productRepository.save(product);
+	}
+
+	public void deleteProduct(String id, Product product) {
+		
+		productRepository.delete(id);
+		
+	}
+
+
+}
+
+
+package com.javaexcel.rest8
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface productRepository extends MongoRepository<Product,String>
+{
+//	List<Order>findByTitle(String title);
+	//List<Order>findByPlaced(boolean placed);
+}
+
+
+
+package com.javaexcel.rest8
+
+@SpringBootApplication
+public class Application {
+	public static void main(String args[])
+	{
+		SpringApplication.run(App.class, args);
+	}
+
+}
