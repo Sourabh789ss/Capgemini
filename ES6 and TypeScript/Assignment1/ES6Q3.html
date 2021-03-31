@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6Q3</title>
+</head>
+<body>
+    <h2>ES6 Assignment Q3</h2>
+    <p id="qs"></p>
+    <p id="qs1"></p>
+    <script>
+            let order={
+                id : 101,
+                title : "Pizza",
+                price : 200,
+
+                printOrder: function(){
+                 // console.log(this.id+" "+this.title+ " "+this.price) 
+                  return this.id+ " " + this.title+ " "+this.price
+                     },
+
+                getPrice: function(){
+                 // console.log(this.price);
+                 return this.price
+                 } 
+            };
+            console.log(order)
+           document.getElementById("qs").innerHTML=" print order = "+ order.printOrder()+ " price= "+order.getPrice()
+           order.getPrice()
+           order.printOrder()
+
+           let copyOrder=Object.assign({},order)
+           console.log(copyOrder)
+          document.getElementById("qs1").innerHTML="copied object = "+copyOrder.printOrder() +" price = "+ copyOrder.getPrice()
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6Q8</title>
+</head>
+<body>
+    
+    <script>
+       
+       class Account{
+          /*  name="Sorb";
+            id=1;
+            balance=1000;  */
+         constructor(name,id,balance) {
+                this.name=name,
+                this.id=id,
+                this.balance=balance;
+            }
+
+       }
+      class SavingAccount extends Account{
+            constructor(name,id,balance,interest,cash_credit)
+            { 
+                super(name,id,balance)
+                this.int=interest;
+                this.cash=cash_credit;
+            }
+
+             totalBalance(x,y,z){
+              return this.balance*this.cash*this.int   
+             }
+      }
+
+      class CurrentAccount extends Account{
+        constructor(name,id,balance,interest,cash_credit)
+            { 
+                super(name,id,balance)
+                this.int=interest;
+                this.cash=cash_credit;
+            }
+
+             totalBalance(x,y,z){
+              return this.balance*this.cash*this.int   
+             }
+            
+      }
+
+      let SAcc=new SavingAccount("Ross",2,1000,5,50)
+       console.log(SAcc)
+       console.log(`Total Saving Balance ${SAcc.totalBalance()}`)
+
+       let CAcc=new CurrentAccount("Chandler",5,1200,6,30)
+       console.log(CAcc)
+       console.log(`Total Current Balance = ${CAcc.totalBalance()}`)
+    </script>
+
+</body>
+</html>

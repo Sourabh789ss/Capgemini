@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6Q4</title>
+</head>
+<body>
+    <h2>ES6 Assignment Q3</h2>
+    <p id="qs"></p>
+    
+    <script>
+
+      let names=["Tom", "Ivan", "Jerry"]
+      newnames=names.map((names,length)=>({
+                      name:names, 
+                      length:names.length
+                   }));
+       console.log(newnames)
+
+      /*  var newArray=Object.values(names)
+       document.getElementById("qs").innerHTML=  newArray */
+    </script>
+
+</body>
+</html>

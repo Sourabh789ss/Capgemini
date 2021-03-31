@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6Q2</title>
+</head>
+<body>
+    <h2>ES6 Assignment Q2</h2>
+      <p id="qs"></p>
+     
+  <script>
+
+      let x=10;
+       
+      if(true){
+          let y=20;
+          console.log(y)
+          document.getElementById("qs").innerHTML="Inside scope the value of y  = "+y
+      } ;
+      console.log(x) 
+
+      document.write("Outide the scope it is giving error")
+      
+      console.log(y) 
+      document.getElementById("qs").innerHTML="Outside scope the value of y  = "+y
+  </script>
+</body>
+</html>

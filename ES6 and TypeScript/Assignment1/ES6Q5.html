@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6Q5</title>
+</head>
+<body>
+   <h2>ES6 Assignment Q5</h2>
+     <script>
+ // (1)-> Default parameters
+ console.log("Default Paramater")
+         let add = function(name="Sourabh", LName="Sharma")
+         {
+            console.log(name+" "+LName)
+         }
+      add()
+      add("Aman") 
+      add("Aman","Kumar")
+      add(undefined,"Kumar") 
+
+  // (2) -> Rest Parameters 
+  console.log("Rest Operator") 
+        let userFriends=function(username,...userfriends)
+        {
+            console.log(username)
+            //console.log(userfriends)  userfriends is an array
+           for(i in userfriends)
+           {
+               console.log(userfriends[i])
+           }
+        }
+        userFriends("Sourabh","honey","gorv")
+        userFriends("Sourabh","honey","gorv","amit")
+        userFriends("Sourabh","honey","gorv","amit","shan")
+ 
+  // (3) -> Spread Operator
+console.log("Spread Operator")
+
+  let printCapitalNames=function(...names)
+  {
+       for (let i in names)
+       {
+          console.log(names[i].toUpperCase())
+         
+       }
+       
+      
+  }
+
+let arr=["Sourabh ","Aman ","Ankit ","Rahul ","Honey "]
+  
+  printCapitalNames(...arr)
+
+     </script>
+
+</body>
+</html>
