@@ -1,0 +1,75 @@
+body,html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:gray;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+
+  .Plximg1, .Plximg2, .Plximg3{
+        position: relative;
+        opacity: 0.90;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /*
+    fixed = parallax
+    scroll = normal
+  */
+        background-attachment: fixed;
+  }
+.Plximg1{
+    background-image: url(Pimg4.jpg);
+    min-height: 100%;
+}
+.Plximg2{
+    background-image: url(Pimg3.jpg);
+    min-height: 400px;
+}
+.Plximg3{
+    background-image: url(Pimg5.jpg);
+    min-height: 400px;
+}
+.section{
+    text-align: center;
+    padding: 50px -20px;
+}
+.section1{
+    background-color:#f4f4f4;
+    color:#666;
+}
+.section2-dark{
+    background-color:#282e34;
+    color:#ddd;
+}
+.section3-grey{
+    background-color: rgb(136, 100, 100);
+    color: rgb(22, 32, 32);
+}
+
+.plxtext{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+.plxtext .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px;
+}
+.plxtext .border.trans{
+    background-color: transparent;
+}
+
+@media (max-width:569px){
+     .Plximg1, .Plximg2, .Plximg3{
+         background-attachment:scroll;
+     }
+}

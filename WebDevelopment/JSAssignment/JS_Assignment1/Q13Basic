@@ -1,0 +1,11 @@
+function inArray(value, arr)
+{
+    for(var i=0; i<arr.length; i++)
+    {
+        if(arr[i]===value){
+          return true;
+        }
+    }
+    return false;
+}
+console.log(inArray(3, [1, 2, 3, 5, 7, 8]));

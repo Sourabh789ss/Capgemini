@@ -1,0 +1,11 @@
+function findLargestElement(array) {
+  var LargestElement = "";
+
+  array.forEach(function(word) {
+    if(word.length > LargestElement.length) {
+      LargestElement = word;
+    }
+  });
+  return LargestElement;
+}
+console.log(findLargestElement(["One","Two","Three", "Four", "Five", "six"])); console.log(word);

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1_JS</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            width: 30%;
+            background: gray; 
+            margin-top: 100px;
+        }
+       main{
+           border: 2px black solid;
+            width: 90%;
+            padding: 50px;
+            margin-left: 100%;
+            background-color: lightgray;
+            
+       }
+        button{
+            border: 2px solid black;
+            padding: 10px;
+            font-size: medium;
+            border-radius: 5px;
+        }
+        
+        button:hover{
+            background-color: lightsalmon;
+            font-size: 18px;
+        }
+        input{
+            border:2px solid black;
+            padding: 5px;
+            font-size: medium;
+        }
+       
+    </style>
+</head>
+<body>
+    <main>
+ <h2><b>Fahrenheit to Celsius Convertor</b></h2>
+ <form name="getTemp" method="GET">
+   
+    Fahrenheit : <input type="text" name="temp" id="fahren" placeholder="Enter Fahrenheit" required><br><br>
+    
+    <button onclick="toCelsius()" style="margin-left: 9rem;" >convert</button><br><br>
+    
+   Celsius :  <input type="text" id="celsius" placeholder="Degree in Celsius "  style="width: 53%;">
+
+</form> 
+  <script>
+// var check=document.getElementById('fahren').value;
+ 
+   const toCelsius=()=>{
+         let fv=document.getElementById('fahren').value;   
+
+         if((fv=="") || isNaN(fv)){
+
+               alert("Only enter a number and acn not be null")
+
+             }else
+             {
+            let cel=(5/9)*(fv-32);
+            
+             // console.log(" fahrenheit is: ", cel,"* celsius.")
+            
+              document.getElementById("celsius").value = cel +"* celsius";
+           }
+  
+     }
+   
+  </script>
+  </main> 
+</body>
+</html>

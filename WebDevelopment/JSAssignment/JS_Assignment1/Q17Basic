@@ -1,0 +1,24 @@
+var array1 = [1, 2, 3, 4, 5];
+function totalArrays(arrays) {
+    i = array1.length,
+    total = 0;
+
+while (i--) {
+    total += arrays[i]; 
+}
+  return total ;
+}
+function totalArrays1(arrays) {
+
+  var total = 0;
+  for (var i = 0; i < arrays.length; i++) {
+    total += arrays[i];
+  }
+  return total;
+}
+function totalArrays2(arrays) {
+  return arrays.reduce((total, array) => total + array, 0);
+}
+console.log(totalArrays(array1));
+console.log(totalArrays1(array1));
+console.log(totalArrays2(array1));

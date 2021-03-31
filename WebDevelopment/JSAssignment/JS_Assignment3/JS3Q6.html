@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3Q6</title>
+</head>
+<body>
+    <p id=demo></p>
+    <p>updated name</p>
+    <p id=demo1></p>
+    <p id=demo2></p>
+    <script>
+
+       var string = "{firstName:'Sourabh', lastName:'Sharma'}";
+        eval('var obj='+string);
+       
+        console.log(obj.firstName)
+        console.log(obj.lastName)
+        document.getElementById("demo").innerHTML="name = "+ obj.firstName+ ", lastName = "+obj.lastName;     
+
+        obj.firstName="Rahul"
+        obj.lastName="Kumar"
+        console.log(obj)
+
+ 
+        document.getElementById("demo1").innerHTML="name = "+ obj.firstName+ ", lastName = "+obj.lastName;
+
+        obj.middleName="Bhardwaj"
+        console.log(obj)
+        document.getElementById("demo2").innerHTML="name = "+ obj.firstName+ ", middleName = "+obj.middleName +", lastName = "+obj.lastName;
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3Q2</title>
+</head>
+<body>
+    
+    <h2>Area of rectangle </h2>
+    <h3>addArea method using prototype property</h3>
+  <p id="demo"></p>
+
+  <script>
+    function rectangle(width, height) {
+      this.width = width;
+      this.height = height;
+      
+    }
+    
+    rectangle.prototype.getArea = function() {
+      return (this.width * this.height)
+    };
+    
+    var area = new rectangle(4,5);
+   
+    document.getElementById("demo").innerHTML =
+    "Area of rectangle having width "+ area.width+ " and height "+area.height +" = " + area.getArea(); 
+    </script>
+
+
+</body> 
+</html>

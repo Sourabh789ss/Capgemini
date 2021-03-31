@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <p> 1 for Add </p>
+      <p>  2 for Subtract</p>
+      <p>  3 for Multiply</p>
+      <p>  4 for Divide</p>
+      <p>  5 for Exponent</p>
+      <p>  6 for Mean</p>
+      <p>  7 for Quit </p>
+       <button onclick="calc()" type="button">Calculate</button>
+
+       <script>
+
+          
+   const calc=()=>
+   {  
+       
+         var n = prompt("Enter the choice to calculate");
+          
+          var n1=prompt(" Enter the number 1: ")
+          console.log(n1)
+           var n2=prompt(" Enter the number 2: ")
+           console.log(n2)
+           switch(n)
+           {
+                 case 1:
+                    
+                        // var n1=prompt(" Enter the number 1: ")
+                         //var n2=prompt(" Enter the number 2: ")
+                          var res=n1+n2;
+                           console.log(res)
+                         break;
+                    
+                  case 2:
+                        // var n1=prompt(" Enter the number 1: ")
+                         //var n2=prompt(" Enter the number 2: ")
+                         var res= n1-n2;
+                         console.log(res)
+                         break;
+                  
+
+                  case 3:
+                      
+                        // var n1=prompt(" Enter the number 1: ")
+                         //var n2=prompt(" Enter the number 2: ")
+                         var res=n1*n2;
+                         console.log(res)
+                         break;
+                  
+
+                  case 4:
+                
+                        // var n1=prompt(" Enter the number 1: ")
+                        // var n2=prompt(" Enter the number 2: ")
+                         var res= n1/n2;
+                         console.log(res)
+                         break;
+            
+                  case 5:
+                      
+                          //var base=prompt("Enter base value:")
+                          //var exp=prompt("Enter exponential value: ")
+                        var res= Math.pow(n1,n2)
+                        console.log(res)
+                            break;
+                
+                 /*  case 6:
+                    
+                            while(true)
+                            {
+                               var mean= prompt("Enter a number")
+                               if(mean!=="***")
+                               {
+                                 //  for(mean );
+                               }
+
+                            }
+                            return 
+                     */
+                     default:
+                         console.log("incorrect choice")
+
+                     
+           }
+   }
+
+   
+       </script>
+
+</body>
+</html>

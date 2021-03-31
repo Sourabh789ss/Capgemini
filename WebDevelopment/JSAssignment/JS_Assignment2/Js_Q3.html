@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Q3</title>
+</head>
+<body>
+    
+    <script>
+ 
+      
+       
+
+        const testEven = (num) =>{
+
+            return (num%2===0)
+        };     
+
+        function find( ar , testEven)
+        {
+            var i=0;
+            for(var i in  ar)
+            { 
+                if( testEven(ar[i])==true)
+                  {
+                    console.log(ar[i])
+                    break;
+                  }
+                
+            }  
+
+        
+        }
+ 
+        find([1,3,5,4,2], testEven);
+
+   </script>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS2Q2</title>
+</head>
+<body>
+    
+    <script>
+ 
+        function square(x)
+        {
+            return (x*x);
+        }
+
+        function double(x)
+        {
+            return (x*2);
+
+        }
+
+      function compose(sqaure,double,x)
+       {
+             return f1(x), f2(x)
+
+       }
+
+       
+      function f1(x)
+         {
+           console.log(square(double(x)))
+
+        }
+ 
+     function f2(x)
+     {
+         console.log(double(square(x)))
+     }
+
+
+     // function calling
+     f1(5);
+     f2(5);
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+h1{
+    background-color: rgb(27, 96, 245); 
+    margin :0;
+}
+.text p{
+    background-color: rgb(167, 167, 245);
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.parah {
+    background-color:rgb(147, 237, 240);
+    padding: 10px;
+    margin-top:0;
+}
+.parah p{
+   padding: 10px;
+   margin:0;
+   margin-top: -5px;
+}
+.last p{
+    background-color: rgb(167, 167, 245) ;
+    padding: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    
+}

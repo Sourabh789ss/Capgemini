@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Q5</title>
+</head>
+<body>
+    
+   <script>
+ 
+
+        function find(arr, func) {
+    while (arr[0] !== undefined) {
+        if (func(arr[0]))
+            return arr[0];
+        return find(arr.slice(1, arr.length), func);
+    }
+}
+
+console.log(find([1, 3, 5, 4, 2], (x) => !(x % 2)));
+
+   </script> 
+
+
+</body>
+</html>

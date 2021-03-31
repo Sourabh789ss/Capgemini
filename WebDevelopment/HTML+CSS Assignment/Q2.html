@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2HTML+CSS</title>
+    <link rel="stylesheet" href="cssQ2.css">
+</head>
+<body>
+   <div>
+    
+     <fieldset>
+        <h1>Registration Form</h1>
+
+        <legend style="color: blanchedalmond; font-size: 30px;">Customer Details</legend>
+    <form class="submitForm">
+        
+        
+        <label for="name">Name</lable>
+        <input type="text" id="name" placeholder="Enter Name">
+        
+        <label for="password">Password</lable>
+        <input type="password" id="password" placeholder="******">
+        
+        <label for="email"> Email</label>
+        <input type="email" id="email" placeholder="xyz12@yahoo.com">
+        
+        <label for="mobile" >Phone No.</label>
+        <input type="tel" id="mobile" placeholder="0123456789">
+ 
+ 
+        <div class="select">
+        <p>Which option best decribe your current role?</p>
+        <select name="role" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full time Job</option>
+            <option value="learner">Full time Learner</option>
+            <option value="other">Other</option>
+        </select>
+
+    </div>
+        <label for="message">Message</label>
+        <textarea id="message"></textarea>
+
+        
+        <input type="submit" value="Submit" id="sub-btn">
+
+        
+        </form>
+    </fieldset> 
+    
+</div>
+</html>

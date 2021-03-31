@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIzza Order</title>
+</head>
+<body>
+    <form>
+        
+        <div>
+        Name: <input type="text" ><br><br>
+        Email: <input type="email"><br><br>
+        </div>
+
+        <label for="topping">Toppings: </label><br><br>
+
+        Extra cheese: <input type="checkbox" >
+        Pepperoni:    <input type="checkbox" >
+        Olives:       <input type="checkbox" >
+        Pepper:       <input type="checkbox" >
+        Bacons:       <input type="checkbox" >
+        Tomatoes:     <input type="checkbox" >
+        Mushrooms:    <input type="checkbox" >
+
+       <h3>How do you want to get your pizza??</h3>
+       Delivery: <input type="radio">
+       Pickup:   <input type="radio"> <br><br>
+       
+
+       <label for="tip">Tip?</label>
+       <select name="tip" id="tip">
+          <option value="15%" selected>15%</option>
+          <option value="20%">20%</option>
+          <option value="25%">25%</option>
+
+       </select>
+
+       <hr>
+
+       <label for="address"><b>Address</b></label><br>
+       <textarea name="address" id="address" cols="50" rows="5"></textarea><br>
+
+       <button type="submit">Submit</button>
+       <button type="reset">Reset</button>
+       <button type="">Show Summary</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_Q3</title>
+
+    <style type="text/css"> 
+    table, th , td{
+      border: 1px black solid;
+    }
+    body {
+        margin: 30px;
+        } 
+    </style>
+</head> 
+</head><body> 
+<table id="myTable"> 
+</table>
+<form> 
+    <h1>Create a table</h1>
+    <h3>press the button to create table</h3>
+<input type="button" onclick="createTable()" value="Create"> 
+</form>
+
+<script>
+    
+
+function createTable()
+{
+rn = window.prompt("Input number of rows", 1);
+cn = window.prompt("Input number of columns",1);
+  
+ for(var r=0;r<parseInt(rn,10);r++)
+  {
+   var x=document.getElementById('myTable').insertRow(r);
+   for(var c=0;c<parseInt(cn,10);c++)  
+    {
+     var y=  x.insertCell(c);
+     y.innerHTML="Row-"+r+" Column-"+c; 
+    }
+   }
+}
+
+</script>
+
+</body>
+</html>

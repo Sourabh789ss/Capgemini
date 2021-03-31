@@ -1,0 +1,153 @@
+/*body*/
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(29, 28, 28);
+    color: whitesmoke;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+h1,h2,h3{
+    margin: 0;
+    padding:15px 0;
+}
+
+.button{
+    display: inline-block;
+    background: rgb(218, 80, 31);
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 5px 18px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.button:hover{
+    background: rgb(161, 69, 69);
+    color: cornsilk;
+    transition-duration: 2s ease;
+    
+}
+/* showcase*/
+#showcase{
+    min-height: 450px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#showcase .bgimg{
+    position :absolute;
+    background: #333;
+    background-image: url(logobCK.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    opacity: 0.30;
+    z-index: -1;
+}
+#showcase h1{
+   padding-top: 100px;
+   padding-bottom: 0;
+   font-size: 50px;
+   
+}
+
+#showcase .content, #section1 .content{
+       padding-bottom: 0 1.5em;
+       
+}
+
+/* Section 1*/
+#section1{
+    background: #eaeaea;;
+    color: #333;
+    padding-bottom: 2em;
+}
+/*Sectio2*/
+#section2{
+    padding: 2em 1em 1em;
+}
+#section2 ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#section2 li{
+    margin-bottom: 1em;
+    background-color: #fff;
+    color: black;
+}
+
+.window-content{
+    padding: 1.5em;
+}
+ /* Section C */
+ #section3{
+     background: blanchedalmond;
+     color: black;
+     padding: 2em;
+ }
+
+#section4 .box{
+    padding: 2em;
+    color: blanchedalmond;
+}
+#section4 .box:first-child{
+    background: rgb(233, 143, 110);
+}
+/* footer*/
+#foot{
+    padding: 2em;
+    background: black;
+    color: #fff;
+    font-size: 20px;
+    text-align-last:right;
+   
+}
+
+#foot a{
+    color: #2690d4;
+    text-decoration: none;
+   
+}
+
+/* media Queries**/
+@media (min-width:799px){
+    .head{
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto,25em)) 1fr;
+    }
+    
+#section1.parah {
+    column-count: 3;
+   column-gap: 2em;
+}
+#section1.parah p{
+     padding-top: 0;
+} 
+.content, #section2 ul{
+    grid-column: 2/4;
+}
+ .box{
+     grid-column: span 2;
+     padding: 10px;
+ }
+ #section2 ul{
+     display: flex;
+     justify-content: space-around;
+ }
+  #section2 li{
+      width: 31%;
+  }
+  #foot{
+      text-align: right;
+  }
+}

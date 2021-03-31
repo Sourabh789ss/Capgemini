@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3Q7b</title>
+</head>
+<body>
+    <script>
+
+function person(fname,lname,age,skills,dateofbirth,address,married,profession)
+ {
+     
+       
+    
+ this.fname=fname;
+ this.lname=lname,
+ this.age=age;
+ this.skills=skills;
+ this.dateofbirth=dateofbirth;
+ this.address=address;
+ this.married=married;
+ this.profession=profession;
+ }
+amithab=new
+person("amithab","bachan",22,["c"],"24/10/1996",{city:"hyderabad",pincode:"521185"},"false","sranalyst")
+
+
+abhisheik=new person("abhisheik",21,"HTML","08/06/1997","false","jr analyst")
+
+var abhisheik =Object.create(amithab);
+
+/* 
+Object.defineProperty(abhisheik, 'constructor', {
+    value: abhisheik,
+    enumerable: false, // so that it does not appear in 'for in' loop
+    writable: true }); */
+
+
+print=function()
+{
+ console.log(amithab);
+ 
+ console.log(abhisheik.lname);
+ console.log(abhisheik.address);
+
+ console.log(abhisheik)
+}();
+
+    </script>
+</body>
+</html>

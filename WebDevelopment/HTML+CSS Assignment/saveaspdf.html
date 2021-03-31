@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1" runat='server'>		 
+        <input type="button" value="Print this div" onclick= 		"javascript:printDiv('sample')" />     
+    </form> 
+         
+    <div class='sample' id='sample'> 
+       <p>Javascript function to save data inside 'sample' div</p> 
+       <p><b>hey hello hello</b></p>
+    </div> 
+     
+    <!--Javascript function to save data inside 'sample' div --> 
+     
+        <script language="javascript" type="text/javascript"> 
+            function printDiv(divID)  
+            { 
+                var divElements = document.getElementById(divID).innerHTML; 
+                var oldPage = document.body.innerHTML; 
+     
+                document.body.innerHTML =  
+                  "<html><head><title></title></head><body>" +  
+                  divElements + "</body>"; 
+     
+                window.print(); 
+     
+                document.body.innerHTML = oldPage; 
+            } 
+        </script> 
+</body>
+</html>
