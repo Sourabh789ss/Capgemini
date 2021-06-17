@@ -1,0 +1,61 @@
+<div class= "bootstrap-wrapper">
+  
+
+    <div class="container  mt" >
+   
+        <div class="row">
+     
+            <div class="col-md-6 offset-md-3">
+               <div class="container text-center">
+                   <img 
+                     class="img-fluid" style="width: 100px;"
+                     src="/assets/passwordlogo.png" alt=""
+                   />
+
+               </div>
+
+                <h1 class="text-center">Login Here</h1>
+
+                <!-- Creating Forms -->
+              
+                <form (ngSubmit)="OnSubmit()">
+                   <mat-form-field class="full-width" >
+                    <mat-label>Username</mat-label>
+                    <input
+                    [(ngModel)]="credentials.userName "
+                    [(ngModel)]="value"
+                    name="username"
+                    required type="text" #message matInput/>
+                    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                   </mat-form-field>
+
+                   <mat-form-field class="full-width">
+                    <mat-label>Password</mat-label>
+                    <input  matInput [type]="hide ? 'password' : 'text'"
+                    [(ngModel)]="credentials.password"
+                    name="password"
+                    required type="password"  #action matInput/>
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                   </mat-form-field>
+
+                   <div class="container text-center">
+                     
+                     <button type="submit" mat-stroked-button color="primary" (click)="openSnackBar(message.value, action.value)">Login</button>
+                     <button style="margin-left: 10px;" type="button" mat-raised-button color="accent" routerLink="/resetpassword">Forget Password</button>
+            
+
+                   </div>
+
+                </form>
+    
+                <br/>
+               <!--  <p class="mt">{{credentials| json}}</p> -->
+            </div>
+        </div>
+    </div>
+
+</div>

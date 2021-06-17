@@ -1,0 +1,67 @@
+<!-- <p>payment works!</p>
+<button mat-raised-button routerLink="http://localhost:9090/">Pay</button>
+
+<a href="http://localhost:9090/"><input mat-raised-button type=button value='HOME'></a>
+
+<a href="http://localhost:9090/"><button mat-raised-button color="primary">Pay</button></a>
+ -->
+
+<h1 mat-dialog-title>Enter User Details</h1>
+<div mat-dialog-content>
+      
+    <form #paymentForm >
+        <div class="form-group full-width">
+            <label for="id">BookingId :</label>
+            <input disabled [(ngModel)]="local_data.id"
+            type="number" class="form-control" id="id" aria-describedby="idHelp">
+            <small id="id" class="form-text text-muted">It will be in your BookingID</small>
+          </div>
+          <div class="form-group full-width">
+            <label for="flightName">FlightName :</label>
+            <input disabled [(ngModel)]="local_data.flightName"
+            type="text" class="form-control" id="id" aria-describedby="idHelp">
+            <small id="id" class="form-text text-muted">Name of the flight.</small>
+          </div>
+          <div class="form-group full-width">
+            <label for="source">Source :</label>
+            <input disabled [(ngModel)]="local_data.source"
+            type="text" class="form-control" value={{local_data.source}} id="id" aria-describedby="idHelp">
+            <small id="source" class="form-text text-muted">Source</small>
+          </div>
+          <div class="form-group full-width">
+            <label for="number">Fair :</label>
+            <input  [(ngModel)]="local_data.fair"
+            type="number" class="form-control" id="fair" aria-describedby="idHelp">
+            <small id="fair" class="form-text text-muted">Fair</small>
+          
+            <label for="number">No of Seats :</label>
+            <input  [(ngModel)]="local_data.seats"
+            type="number" class="form-control" id="fair" aria-describedby="idHelp">
+            <small id="fair" class="form-text text-muted">No of seats</small>
+           </div>
+
+
+        <div class="form-group full-width">
+            <label for="id">UserId :</label>
+            <input disabled [(ngModel)]="local_data.id"
+            type="number" class="form-control" id="id" aria-describedby="idHelp">
+            <small id="id" class="form-text text-muted">It will be in your profile name.</small>
+          </div>
+        <div class="form-group full-width">
+            <label for="username">Username :</label>
+            <input [(ngModel)]="local_data.username "
+            type="text" class="form-control" id="username" aria-describedby="usernameHelp">
+            <small id="usernameHelp" class="form-text text-muted">It will be in your profile name.</small>
+          </div>
+        <div class="form-group full-width">
+        <label for="">Email address :</label>
+          <input [(ngModel)]="local_data.email"
+           type="email" class="form-control" id="email" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+     
+  
+       <a href="http://localhost:9090"> <button type="button" class="btn btn-primary block">Pay</button></a>
+      </form>
+
+</div>

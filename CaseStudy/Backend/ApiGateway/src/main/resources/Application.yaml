@@ -1,0 +1,61 @@
+#-setting the port for gateway
+server:
+  port: 8180
+
+#-configuration
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: http://localhost:8082
+          predicates:
+            - Path=/users/**
+            filters:
+              - name: CircuitBreaker
+                args:
+                  name: USER-SERVICE
+                  fallbackuri: forward:/userServiceFallBack
+
+          - id: BOOKING-SERVICE
+             uri: http://localhost:8085
+            predicates:
+                - Path=/bookings/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    name: BOOKING-SERVICE
+                    fallbackuri: forward:/bookingServiceFallBack
+
+
+          - id: PAYMENT-SERVICE
+            uri: http://localhost:8087
+            predicates:
+              - Path=/payment/**
+              filters:
+                - name: CircuitBreaker
+                  args:
+                    name: PAYMENT-SERVICE
+                    fallbackuri: forward:/paymentServiceFallBack
+
+
+# setting timeout
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+#      for registering with Eureka-Server
+eureka:
+  client:
+    register-with-eureka: true             f
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost

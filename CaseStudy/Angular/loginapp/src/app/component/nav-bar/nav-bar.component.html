@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <span><a mat-icon-button routerLink="/">Login App</a></span>
+
+    <span class="example-spacer menu-spacer" style="margin-left: 20px;"></span>
+    <div>
+    <a  mat-icon-button *ngIf="!LoggedIn" routerLink="/login">Login </a>
+    <a  style="margin-right:10px" [matMenuTriggerFor]="menu" mat-icon-button *ngIf="LoggedIn" >Change</a>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/changepassword">Change Password</button>
+        <button mat-menu-item routerLink="/resetpassword">Reset Password</button>
+    </mat-menu>
+
+    <a   style="margin-right:10px" mat-icon-button *ngIf="LoggedIn" >User </a>
+    <a  style="margin-right:10px" *ngIf="!LoggedIn" mat-icon-button (click)="logoutUser()"  > Logout</a>
+</div> 
+</mat-toolbar>

@@ -1,0 +1,201 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+   
+</div>
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: <small>This will be your login user
+                                name</small> </label>
+                        <input required type="text" [(ngModel)]="user.firstName" name="name" id="name"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="LastName"><span class="req">* </span> lastname: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="user.lastName" name="domain"
+                            id="email" placeholder="Enter your lastname" />
+                        <div class="status" id="status"></div>
+                    </div>
+                 
+
+                    <div class="form-group">
+                        <label for="Email"><span class="req">* </span> Email: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.email" name="email" id="txt" required
+                            placeholder="Enter valid email address" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                
+                    <div class="form-group">
+                        <label for="Mobile"><span class="req">* </span> Mobile no. : </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.mobile" name="experience" id="txt"
+                            placeholder="enter your mobile number" required />
+                      <div id="errLast"></div>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form>--><!-- ends register form -->
+            <!-- second for to fiter user-->
+       <!-- </div> ends col-6 -->
+<!---
+    </div>
+</div>
+ -->
+
+<!--material  registration form-->
+
+<div class= "bootstrap-wrapper" >
+  
+
+    <div class="container  mt" >
+   
+        <div class="row" style="margin-top: 100px;">
+           
+            <div class="col-md-6 offset-md-3">
+               <div class="container text-center">
+                   <img 
+                     class="img-fluid" style="width: 250px;"
+                     src="/assets/images/passwordlogo.png" alt=""
+                   />
+
+               </div>
+
+             <h1 class="text-center">Register Here</h1>
+<!-- 
+<form class="example-form">
+ <fieldset>
+  <mat-form-field class="example-full-width">
+      <mat-label>Company (disabled)</mat-label>
+      <input matInput disabled value="Google">
+    </mat-form-field>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>First name</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Long Last Name That Will Be Truncated</mat-label>
+        <input matInput>
+      </mat-form-field></td>
+    </tr></table>
+  
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address 2</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </p>
+  
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>City</mat-label>
+        <input matInput placeholder="Ex. San Francisco">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>State</mat-label>
+        <input matInput placeholder="Ex. California">
+      </mat-form-field></td>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Postal Code</mat-label>
+        <input matInput #postalCode maxlength="5" placeholder="Ex. 94105" value="94043">
+        <mat-hint style="text-align: end;">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field></td>
+    </tr></table>
+</fieldset>
+  </form> -->
+
+  
+ <form class="example-form">
+
+    <mat-form-field class="full-width" >
+        <mat-label>Username</mat-label>
+        <input
+       [(ngModel)]="user.username "
+       [(ngModel)]="value1"
+        name="username"
+        required type="text" matInput/>
+        <button mat-button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+          <mat-icon>close</mat-icon>
+        </button>
+       </mat-form-field>
+
+       <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input  matInput 
+        [(ngModel)]="user.password"
+        [(ngModel)]="value2"
+        name="password"
+        required type="password"  matInput/>
+        <button mat-button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+            <mat-icon>close</mat-icon>
+          </button>
+       </mat-form-field>
+
+       <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input  matInput 
+        [(ngModel)]="user.email"
+        [(ngModel)]="value3"
+        [formControl]="email"
+        name="email"
+        placeholder="pat@example.com"
+        required type="email"  matInput/>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+            <mat-icon>close</mat-icon>
+          </button>
+       </mat-form-field>
+
+
+       <mat-form-field class="full-width">
+        <mat-label>Mobile</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input  matInput 
+        [(ngModel)]="user.mobile"
+        name="mobile"  placeholder="555-555-1234"
+        required type="tel"  matInput/>
+        <button mat-button  matSuffix mat-icon-button aria-label="Clear" >
+            <mat-icon matSuffix>phone</mat-icon>
+          </button>
+       </mat-form-field>
+
+       <div class="container text-center">
+        <button class="btn btn-success" mat-stroked-button color="primary" type="submit" name="submit_reg" value="Register" (click)="openSnackBar()" (click)="registerNow()">Register</button>
+    </div>
+
+</form>
+
+
+  <br/>
+  
+</div>
+</div>
+</div>
+
+</div>
+
+
+<div>
+    <a class="nav-link" routerLink="/home">Home</a>
+</div>
+    

@@ -1,0 +1,122 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+   
+</div>
+
+
+<!--  material register flights form -->
+
+<div class= "bootstrap-wrapper" >
+  
+
+    <div class="container  mt" >
+   
+        <div class="row" style="margin-top: 100px;">
+           
+            <div class="col-md-6 offset-md-3">
+               <div class="container text-center">
+                   <img 
+                     class="img-fluid" style="width: 250px;"
+                     src="/assets/images/passwordlogo.png" alt=""
+                   />
+
+               </div>
+
+             <h1 class="text-center">Register Flights Here</h1>
+
+
+  
+             <form class="example-form">
+
+                <mat-form-field class="full-width" >
+                    <mat-label>FlightName</mat-label>
+                    <input
+                   [(ngModel)]="book.flightName "
+                   [(ngModel)]="value1"
+                    name="flightName"
+                    required type="text" matInput/>
+                    <button mat-button *ngIf="value1" matSuffix mat-icon-button aria-label="Clear" (click)="value1=''">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                   </mat-form-field>
+            
+                   <mat-form-field class="full-width">
+                    <mat-label>source</mat-label>
+                    <input  matInput 
+                    [(ngModel)]="book.source"
+                    [(ngModel)]="value2"
+                    name="source"
+                    required type="text"  matInput/>
+                    <button mat-button *ngIf="value2" matSuffix mat-icon-button aria-label="Clear" (click)="value2=''">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                   </mat-form-field>
+            
+                   <mat-form-field class="full-width">
+                    <mat-label>destination</mat-label>
+                    <input  matInput 
+                    [(ngModel)]="book.destination"
+                    [(ngModel)]="value3"
+                    name="destination"
+                    placeholder="pat@example.com"
+                    required type="text"  matInput/>
+                    <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                   </mat-form-field>
+            
+            
+                   <mat-form-field class="full-width">
+                    <mat-label>Date</mat-label>
+                    <input  matInput [matDatepicker]="picker1"
+                    [(ngModel)]="book.date"
+                    name="datetime"  placeholder="555-555-1234"
+                    required  matInput/>
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                 <mat-datepicker #picker1></mat-datepicker>
+                    <button mat-button  matSuffix mat-icon-button aria-label="Clear" >
+                      </button>
+                   </mat-form-field>
+
+ 
+
+                   <mat-form-field class="full-width">
+                    <mat-label>fair</mat-label>
+                    <input  matInput 
+                    [(ngModel)]="book.fair"
+                    [(ngModel)]="value4"
+                    name="fair"
+                    placeholder=" 100.00"
+                    required type="number"  matInput/>
+                    <span matPrefix>Rs&nbsp;</span>
+                    <button mat-button *ngIf="value3" matSuffix mat-icon-button aria-label="Clear" (click)="value3=''">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                   </mat-form-field>
+            
+                   <div class="container text-center">
+<!--                     <button class="btn btn-success" mat-stroked-button color="primary" type="submit" name="submit_reg" value="Register" (click)="openSnackBar()" (click)="registerNow()">Register</button>
+ -->                    <input class="btn btn-success" type="submit" name="submit_reg" value="RegisterFlight"  (click)="registerFlight()" >
+                </div>
+            
+            </form>
+            
+            
+         <br/>
+              
+         </div>
+       </div>
+  </div>
+            
+</div>
+            
+
+
+<!-- ************************************* -->
+
+<div>
+    <a class="nav-link" routerLink="/home">Home</a>
+</div>
